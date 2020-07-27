@@ -1,0 +1,131 @@
+contoh overridding :
+
+package inheritance;
+
+class Persegi extends BangunDatar {
+    float sisi;
+
+    @Override
+    float luas(){
+        float luas = sisi * sisi;
+        System.out.println("Luas Persegi: " + luas);
+        return luas;
+    }
+
+    @Override
+    float keliling(){
+        float keliling = 4 * sisi;
+        System.out.println("Keliling Persegi: " + keliling);
+        return keliling;
+    }
+}
+
+
+package inheritance;
+
+
+public class Lingkaran extends BangunDatar{
+    
+    float r;
+    
+    @Override
+    float luas(){
+        float luas = (float) (Math.PI * r * r);
+        System.out.println("Luas lingkaran: " + luas);
+        return luas;
+    }
+    
+    @Override
+    float keliling(){
+        float keliling = (float) (2 * Math.PI * r);
+        System.out.println("Keliling Lingkaran: " + keliling);
+        return keliling;
+    }
+    
+}
+
+package inheritance;
+
+
+public class PersegiPanjang extends BangunDatar {
+    float panjang;
+    float lebar;
+    
+    @Override
+    float luas(){
+        float luas = panjang * lebar;
+        System.out.println("Luas Persegi Panjang:" + luas);
+        return luas;
+    }
+    
+    @Override
+    float keliling(){
+        float kll = 2*panjang + 2*lebar;
+        System.out.println("Keliling Persegi Panjang: " + kll);
+        return kll;
+    }
+}
+
+package inheritance;
+
+
+public class Segitiga extends BangunDatar {
+    
+    float alas;
+    float tinggi;
+
+    @Override
+    float luas() {
+        float luas = 1/2 * (alas * tinggi);
+        System.out.println("Luas Segitiga: " + luas);
+        return luas;
+    }   
+    
+}
+
+package inheritance;
+
+
+public class BangunDatar {
+        float luas(){
+        System.out.println("Menghitung laus bangun datar");
+        return 0;
+    }
+    
+    float keliling(){
+        System.out.println("Menghitung keliling bangun datar");
+        return 0;
+    }
+    
+}
+
+package inheritance;
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+        
+        BangunDatar bangunDatar = new BangunDatar();
+        
+        
+        Persegi persegi = new Persegi();
+        persegi.sisi = 2;
+        
+        
+        Lingkaran lingkaran = new Lingkaran();
+        lingkaran.r = 22;
+        
+        
+        PersegiPanjang persegiPanjang = new PersegiPanjang();
+        persegiPanjang.panjang = 8;
+        persegiPanjang.lebar = 4;
+        
+       
+        Segitiga mSegitiga = new Segitiga();
+        mSegitiga.alas = 12;
+        mSegitiga.tinggi = 8;
+        
+        
+        bangunDatar.luas();
+        bangunDatar.keliling();
