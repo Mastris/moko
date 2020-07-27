@@ -1,0 +1,22 @@
+package Jayapura;
+
+
+public class Lingkaran {
+  
+    float luas(float r){
+        return (float) (Math.PI * r * r);
+    }
+
+    double luas(double d){
+        return (double) (1/4 * Math.PI * d);
+    }
+
+}
+
+ket:
+
+Class Lingkaran memiliki dua method yang namanya sama, yakni luas().
+
+Tapi parameter dan tipe datanya berbeda..
+
+..dan juga isi atau rumus di dalamnya berbeda.
